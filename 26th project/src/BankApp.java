@@ -8,7 +8,7 @@ public class BankApp {
 
 	public static void main(String[] args) {
 		
-		ArrayList<AccountInfo> finalList = new ArrayList<AccountInfo>();
+		//ArrayList<AccountInfo> finalList = new ArrayList<AccountInfo>();
 		
 		Accounts accounts = new Accounts();
 		
@@ -57,6 +57,7 @@ public class BankApp {
 			String des = sc.next();
 			if(des.equalsIgnoreCase("-1"))
 			{
+				
 				break;
 			}
 			
@@ -69,7 +70,7 @@ public class BankApp {
 				break;
 			}
 			
-			finalList.add(curr);
+			
 			
 			if(des.equalsIgnoreCase("C"))
 			{
@@ -112,7 +113,7 @@ public class BankApp {
 			
 		}
 		
-		
+		ArrayList<AccountInfo> finalList = accounts.getAccounts();
 			for(AccountInfo a: finalList)
 			{	
 				double curr_balance = a.getBalance();
